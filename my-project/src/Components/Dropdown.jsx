@@ -23,9 +23,10 @@ const Dropdown = ({ isOpen, setIsOpen, array, state, setState,nativeOpen,setNati
         {isOpen ? (
           <>
             <ul className="flex justify-start items-center flex-col rounded-lg glass shadow-css cursor-pointer">
-              {array.map((list) => {
+              {array.map((list,index) => {
                 return (
                   <li
+                  key={index}
                     className="w-full text-white font-bold flex justify-between items-center px-3 py-2 hover:bg-gray-300 hover:text-[#2864F6]"
                     onClick={() => {
                       setState(list.toLowerCase());
